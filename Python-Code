@@ -1,0 +1,63 @@
+import random
+def game(a,b):
+    if (a=="R" and b=="P"):
+        print("Computer wins")
+    elif (a=="R" and b=="S"):
+        print("You win")
+    elif (a=="R" and b=="L"):
+        print("You win")
+    elif (a=="R" and b=="SP"):
+        print("Computer win")
+    elif (a=="P" and b=="R"):
+        print("You win")
+    elif (a=="P" and b=="S"):
+        print("Computerf wins")
+    elif (a=="P" and b=="L"):
+        print("Computer wins")
+    elif (a=="P" and b=="SP"):
+        print("You win")
+    elif (a=="S" and b=="R"):
+        print("Computer wins")
+    elif (a=="S" and b=="P"):
+        print("You win")
+    elif (a=="S" and b=="L"):
+        print("You win")
+    elif (a=="S" and b=="SP"):
+        print("Computer wins")
+    elif (a=="L" and b=="R"):
+        print("Computer wins")
+    elif (a=="L" and b=="P"):
+        print("You win")
+    elif (a=="L" and b=="S"):
+        print("Computer wins")
+    elif (a=="L" and b=="SP"):
+        print("You win")
+    elif (a=="SP" and b=="R"):
+        print("You win")
+    elif (a=="SP" and b=="P"):
+        print("Computer wins")
+    elif (a=="SP" and b=="S"):
+        print("You win")
+    elif (a=="SP" and b=="L"):
+        print("Computer wins")
+    elif (a==b):
+        print("Tie")
+    else:
+        print("Please make a valid move")
+ 
+print("computer's turn: Rock(R) Paper(P) Scissor(S) Lizard(L) Spock(SP)? ")
+r=random.randint(1,5)
+if r==1:
+    b="R"
+elif r==2:
+    b="P"
+elif r==3:
+    b="S"
+elif r==4:
+    b="L"
+else:
+    b="SP"
+a=input("Player's turn: Rock(R) Paper(P) Scissor(S) Lizard(L) Spock(SP)?")
+print(f"Computer chose {b} ")
+print(f"You chose {a} ")
+game(a,b)
